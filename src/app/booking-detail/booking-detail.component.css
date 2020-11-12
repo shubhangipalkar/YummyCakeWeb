@@ -1,0 +1,35 @@
+.bkcacke{
+  border: 2px solid grey;
+margin-left: auto;
+margin-right: auto;
+position: relative;
+height: 550px;
+width: 800px;
+margin-top: 30px;
+align-items: center;
+padding: 10px;
+background-color: grey;
+border-radius: 5%;
+}
+
+.radiochk{
+  margin-left: 10%;
+  margin-right: 30px;
+}
+
+.citymarge{
+  margin-left: 15px;
+}
+
+.fm{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2{
+  text-align: center; color: gray; text-decoration: underline; margin-top: 20px;
+}
+
+.error-msg{
+  color: red;
+}

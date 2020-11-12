@@ -1,0 +1,28 @@
+.city-container{
+  height: 500px;
+  width: 500px;
+  position: relative;
+    border: 2px solid palevioletred;
+    margin-left: auto;
+  margin-right: auto;
+  border-radius: 20%;
+  background-color: bisque;
+}
+
+.city-image{
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.city-im{
+  padding-top: 2px;
+  padding-left: 35%;
+}
+
+.city-image:hover{
+  opacity: 0.5;
+}

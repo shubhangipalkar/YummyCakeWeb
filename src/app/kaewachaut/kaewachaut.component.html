@@ -1,0 +1,148 @@
+<app-cake></app-cake>
+
+<h2>ddfgga</h2>
+<h2>ddfgga</h2>
+<h2>ddfgga</h2>
+<h2>ddfgga</h2>
+<h2>ddfgga</h2>
+<h2>ddfgga</h2>
+<h2>ddfgga</h2>
+<h2>ddfgga</h2>
+ddddhhfd
+<!-- revolution slider -->
+<div class="banner-slider">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="slider_main" class="carousel slide" data-ride="carousel">
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../assets/image/kaewachaut/kw1.jfif" alt="xyz" />
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/image/kaewachaut/kw2.jfif" alt="xyz" />
+            </div>
+          </div>
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#slider_main" data-slide="prev">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </a>
+          <a class="carousel-control-next" href="#slider_main" data-slide="next">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <br>
+        <br>
+        <div class="descrip">
+          <h2> Cake Description </h2>
+          The best way to wish someone happy birthday is by surprising them with these two personalised photo cupcakes
+          with their photo on one and birthday wish on another. With your cute present, let them know that you want the
+          best for them also that you love them and care or them.
+
+        </div>
+      </div>
+
+      <div class="col-md-6 page">
+        <h1> Customise Karwachaut Cake
+          <img style="height: 40px ; width: 40px;" src="../../assets/image/emoji.jfif" alt="Emoji">
+        </h1>
+
+        <table>
+          <tr>
+            <th style="width: 200px;"></th>
+            <th style="width: 200px;"></th>
+          </tr>
+
+          <tr class="col-md-6">
+            <td> <img style="height: 70px; width: 70px;" src="../../assets/image/kaewachaut/kw3.jfif" alt="xyz" price="250" (click)="getPrice(price)">
+              <p> Karwachaut Cake </p>
+              <p> <b> 250 &#8377; half Kg </b> </p>
+              <br>
+
+            </td>
+            <td>
+              <img style="height: 70px; width: 70px; " src="../../assets/image/kaewachaut/kw3.jfif" alt="xyz" price="550" (click)="getPrice(price)">
+              <p> Karwachaut Cake </p>
+              <p> <b> 550 &#8377; 1 Kg </b></p>
+              <br>
+
+            </td>
+          </tr>
+          <tr class="col-md-6">
+            <td>
+              <div>
+
+                <label for="flavour"> <b> Select Flavour </b>
+                </label>
+              </div>
+
+
+                <select [value]="selected" (selectionChange)="getSeries($event)" class="bg-green" name="flavour" id="flavour">
+                  <option value="1" >Chocolate</option>
+                  <option value="2" >Vanilla</option>
+                  <option value="3" >Pienapple</option>
+                  <option value="4" >Rusmalai</option>
+                  <option value="5" >Mix Fruite</option>
+                </select>
+            </td>
+            <td>
+              <div>
+
+                <label for="myFile"> <b>  Upload your image </b>
+                </label>
+              </div>
+
+              <!-- <form action="/action_page.php"> -->
+
+                <input type="file" id="myFile" name="filename">
+
+
+
+            </td>
+          </tr>
+          <br>
+          <tr>
+
+            <td colspan="2">
+              <label for="msg"> <b> Message </b></label>
+              <input style="width: 90%;" type="text" placeholder="Enter your message on cake">
+            </td>
+          </tr>
+          <br>
+          <tr>
+            <td colspan="2">
+              <button class="btn btn-success" (click)="buyNow()"> Buy Now </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br>
+      <br>
+
+      <div class="logomade">
+        <table style="padding: 5px;">
+          <tr>
+            <th style="width:400px;"></th>
+            <th style="width:400px;"></th>
+            <th style="width:400px;"></th>
+          </tr>
+          <tr>
+            <td style="font-size: x-large; color: aliceblue;"><img class="imgn" src="../../assets/image/thumb.png" alt="Gurentee">
+             100% delivery on time </td>
+
+             <td style="font-size: x-large; color: aliceblue;"><img class="imgn" src="../../assets/image/money.jfif" alt="Money">
+              100% money protection </td>
+
+              <td style="font-size: x-large; color: aliceblue;"><img class="imgn" src="../../assets/image/customer.jfif" alt="Customer">
+                10K+ happy customers </td>
+
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- end revolution slider -->
+
+  <app-footer></app-footer>

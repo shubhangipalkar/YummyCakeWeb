@@ -1,0 +1,118 @@
+<br>
+<br>
+<section>
+         <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" style="padding: 0;">
+                   <div class="map_section">
+                     <div id="map">
+                     </div>
+                   </div>
+                </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- footer -->
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <ul class="social_icon">
+                    <li><a href="#" class="fa fa-facebook"></a><b>Connect with Facebook</b></li>
+                    <li><a href="#" class="fa fa-twitter"></a><b>Connect with Twitter</b></li>
+                    <li><a href="#" class="fa fa-linkedin"></a><b>Connect with Linkin</b></li>
+                    <li><a href="#" class="fa fa-youtube"></a><b>Connect with Youtub</b></li>
+                    <li><a href="#" class="fa fa-instagram"></a><b>Connect with Instagram</b></li>
+                    <li><a href="#" class="fa fa-skype"></a><b>Connect with Skype</b></li>
+                                      </ul>
+               </div>
+               <div class="col-lg-2 col-md-6">
+                  <div class="footer_links">
+                     <h3>Quick link</h3>
+                     <ul>
+                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Home</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Features</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Evens</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Markrting</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Blog</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Testimonial</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-8">
+                  <div class="footer_links">
+                     <h3>Contact us</h3>
+                     <form action="index.html">
+                        <fieldset>
+                           <div class="field">
+                             <label for="name"> Name </label>
+                              <input type="text" name="name" placeholder="Your Name" required="" />
+                           </div>
+                           <div class="field">
+                            <label for="name"> Email </label>
+                              <input type="email" name="email" placeholder="Email" required="" />
+                           </div>
+                           <div class="field">
+                            <label for="name"> Subject </label>
+                              <input type="text" name="subject" placeholder="Subject" required="" />
+                           </div>
+                           <div class="field">
+                            <label for="name"> Message </label>
+                              <textarea placeholder="Message"></textarea>
+                           </div>
+                           <div class="field">
+                              <div class="center">
+
+                                 <button class="reply_bt">Send</button>
+                              </div>
+                           </div>
+                        </fieldset>
+                     </form>
+                  </div>
+               </div>
+
+
+
+         </div>
+        </div>
+
+      </footer>
+
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- Scrollbar Js Files -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+
+<script>
+
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 40.645037, lng: -73.880224},
+          });
+
+        var image = 'images/maps-and-flags.png';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 40.645037, lng: -73.880224},
+          map: map,
+          icon: image
+        });
+      }
+    </script>
+
+
+   <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js -->
+
+

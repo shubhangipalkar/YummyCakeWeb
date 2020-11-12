@@ -1,0 +1,66 @@
+<h2 >Please fill below details</h2>
+<form [formGroup] = "bookcake" (ngSubmit)="submit()" class="bkcacke">
+
+    <div class="form-group col-md-11 fm">
+      <label for="inputEmail4">Full Name</label>
+      <input type="text" class="form-control" formControlName="fname" placeholder="Enter full name">
+      <span *ngIf="!fname.valid && (fname.touched || submitted)" class="error-msg"> Please enter your name</span>
+    </div>
+    <div class="form-group col-md-11 fm">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" formControlName="email" placeholder="Enter Email id ">
+      <span *ngIf="!email.valid && (email.touched || submitted)" class="error-msg"> Please enter valid email id</span>
+    </div>
+    <div class="form-group col-md-11 fm">
+      <label for="mnumber">Number</label>
+      <input type="text" class="form-control" formControlName="mnumber" placeholder="Enter mobile number">
+      <span *ngIf="!mnumber.valid && (mnumber.touched || submitted)" class="error-msg"> Please enter valid number</span>
+    </div>
+
+  <div class="form-group col-md-11 fm">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" formControlName="address" placeholder="Apartment, studio, or floor">
+    <span *ngIf="!address.valid && (address.touched || submitted)" class="error-msg"> Please enter your address</span>
+  </div>
+
+  <div class="form-row citymarge ">
+    <div class="form-group col-md-3 fm">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" formControlName="city" placeholder="Enter city">
+      <span *ngIf="!city.valid && (city.touched || submitted)" class="error-msg"> Please enter your city name</span>
+    </div>
+    <div class="form-group col-md-3 fm">
+      <label for="inputState">State</label>
+      <select [value] = "selected" formControlName="state" class="form-control">
+        <option value= "1">AndhraPradesh</option>
+        <option value="2">Bihar </option>
+        <option value="3">Goa</option>
+        <option value="4">Gujarat</option>
+        <option value="5">Haryana</option>
+        <option value="6">Kerala</option>
+        <option value="7">Manipur</option>
+        <option value="8">MadhyaPradesh</option>
+        <option value="9">Maharashtra</option>
+      </select>
+      <span *ngIf="!state.valid && (state.touched || submitted)" class="error-msg"> Please select your state</span>
+    </div>
+      <div class="form-group col-md-3 fm">
+        <label for="inputCity">Pincode</label>
+        <input type="text" class="form-control" formControlName="pincode" placeholder="Pincode number">
+        <span *ngIf="!pincode.valid && (pincode.touched || submitted)" class="error-msg"> Please enter your pincode</span>
+      </div>
+
+
+    </div>
+
+    <div class="form-check" >
+      <label for="cashon" class="radiochk">Cash on delivery</label>
+      <input class="form-check-input" type="radio" id="cashon" value="1" formControlName="payment" >
+      <label for="card" class="radiochk" >Payment by card</label>
+      <input class="form-check-input" type="radio" id="card" value="2" formControlName="payment">
+      <span *ngIf="!payment.valid && (payment.touched || submitted)" class="error-msg"> Please select one option</span>
+    </div>
+
+  <button style="margin-left:45%; margin-top: 10px; width: 100px" type="submit" class="btn btn-info ">Submit</button>
+
+</form>

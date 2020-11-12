@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <img style="width: 140px; height: 30px;" src="../../assets/image/logo.png">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" routerLink="city">
+          Select City</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="cake">Cake<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Registration</a>
+      </li>
+
+    </ul>
+    <div class="form-inline my-5 my-lg-0" style=" align-content: flex-end;">
+      <img class="mr-sm-2" style="height: 30px; width: 40px;"  src="../../assets/image/icon.png" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search for cake" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+  </div>
+  </div>
+</nav>
+<!--
+<div>
+<app-cake></app-cake>
+</div> -->
+<!-- Container for the image gallery -->
+
+<div>
+  <div class="row">
+    <div style="text-decoration: underline;"class="col-sm-12 btn btn-primary">
+      Cake Gallery
+
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+    <div class="col-sm-1">
+    </div>
+ </div>
+  <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+  <div class="col-sm-2">
+    <button class="btn btn-success" (click)="filterBy='all'">Cakes Available </button>
+  </div>
+ <div class="col-sm-2">
+  <button class="btn btn-success" (click)="filterBy='boss'" routerLink="/cake/boss">Boss Day</button>
+  </div>
+  <div class="col-sm-2">
+    <button class="btn btn-success" (click)="filterBy='kw'" routerLink="/cake/karwachaut">Karwachaut Cake</button>
+  </div>
+  <div class="col-sm-2">
+    <button class="btn btn-success" (click)="filterBy='wed'" routerLink="/cake/wedding">Wedding Cake</button>
+  </div>
+  <div class="col-sm-2">
+    <button class="btn btn-success" (click)="filterBy='ice'" routerLink="/cake/ice">Ice Cake</button>
+  </div>
+  <div class="col-sm-2">
+    <button class="btn btn-success" (click)="filterBy='bshower'" routerLink="/cake/baby">Baby Shower</button>
+  </div>
+ </div>
+<div class="row">
+  <ul class="imgshow">
+    <li class="imgli" *ngFor="let img of (allImages | filterImages: filterBy) ">
+      <a [routerLink]="['../../assets/image', img.id]">
+        <img src="{{img.path}}" class="img" width="270" height="270">
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<router-outlet></router-outlet>
