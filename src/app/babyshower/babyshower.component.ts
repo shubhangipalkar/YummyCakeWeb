@@ -10,6 +10,9 @@ export class BabyshowerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log ('babyshow is loading')
   }
+
+
 
 }

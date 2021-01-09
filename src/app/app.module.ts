@@ -20,9 +20,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { BookingDetailComponent } from './booking-detail/booking-detail.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
-import { FilterImagesPipe } from './filter-images.pipe';
 import { UserService } from './Services/user.service';
 import { PaymentComponent } from './payment/payment.component';
+import { FilterImagePipe } from './filter-image.pipe';
+import { dataService } from './Model/data';
 
 @NgModule({
   declarations: [
@@ -39,8 +40,8 @@ import { PaymentComponent } from './payment/payment.component';
     BabyshowerComponent,
     BookingDetailComponent,
     ImageDetailComponent,
-    FilterImagesPipe,
-    PaymentComponent
+    PaymentComponent,
+    FilterImagePipe
   ],
   imports: [
     BrowserModule,
@@ -49,7 +50,7 @@ import { PaymentComponent } from './payment/payment.component';
     ReactiveFormsModule,
     NgImageSliderModule
   ],
-  providers: [FilterImagesPipe, UserService],
+  providers: [FilterImagePipe, UserService, dataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,26 +12,25 @@ import {BabyshowerComponent} from './babyshower/babyshower.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BookingDetailComponent } from './booking-detail/booking-detail.component';
 import { PaymentComponent } from './payment/payment.component';
+import { FooterComponent } from './footer/footer.component';
 // import { CakeRoutingModule } from './cake/cake-routing.module';
 
 const routes: Routes = [
+  {path: 'nav', component: NavBarComponent},
   {path: 'city', component: CityComponent},
-  {path: 'cake', component: CakeComponent,
-  children : [
-  {path: 'ice', component: IceComponent},
-  {path: 'bdy', component: BdyComponent },
-  {path: 'boss', component: BossComponent},
-  {path: 'karwachaut', component: KaewachautComponent},
-  {path: 'wedding', component: WeddingComponent},
-  {path: 'baby', component: BabyshowerComponent},
-  {path: 'karwachaut/bookdetail', component: BookingDetailComponent},
-  {path: 'karwachaut/bookdetail/payment', component: PaymentComponent},
+  {path: 'cake', component: CakeComponent},
+  {path: 'cake/ice', component: IceComponent},
+  {path: 'cake/bdy', component: BdyComponent },
+  {path: 'cake/boss', component: BossComponent},
+  {path: 'cake/karwachaut', component: KaewachautComponent},
+  // {path: 'cake/karwachaut/:id', component: KaewachautComponent},
+  {path: 'cake/wedding', component: WeddingComponent},
+  {path: 'cake/baby', component: BabyshowerComponent},
+  // {path: 'karwachaut/bookdetail', component: BookingDetailComponent},
+  // {path: 'karwachaut/bookdetail/payment', component: PaymentComponent},
+  // {path: '**', component: CakeComponent},
+  {path: '', component: NavBarComponent}
 
-
-  ]},
-
-  {path: '', component: NavBarComponent},
-  {path: '**', component: CakeComponent}
 
 
 ];

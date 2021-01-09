@@ -12,7 +12,7 @@
       </li>
 
       <li class="nav-item active">
-        <a class="nav-link" routerLink="cake">Cake<span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="cake">Cake</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Login</a>
@@ -30,10 +30,7 @@
   </div>
   </div>
 </nav>
-<!--
-<div>
-<app-cake></app-cake>
-</div> -->
+
 <!-- Container for the image gallery -->
 
 <div>
@@ -48,34 +45,78 @@
     </div>
  </div>
   <div class="row" style="margin-top:10px;margin-bottom: 10px;">
-  <div class="col-sm-2">
+  <div class="space">
     <button class="btn btn-success" (click)="filterBy='all'">Cakes Available </button>
   </div>
- <div class="col-sm-2">
-  <button class="btn btn-success" (click)="filterBy='boss'" routerLink="/cake/boss">Boss Day</button>
+ <div class="space">
+  <!-- <button class="btn btn-success" (click)="filterBy='boss'" routerLink="cake/boss">Boss Day</button> -->
+  <button class="btn btn-success" (click)="filterBy='boss'">Boss Day</button>
   </div>
-  <div class="col-sm-2">
-    <button class="btn btn-success" (click)="filterBy='kw'" routerLink="/cake/karwachaut">Karwachaut Cake</button>
+  <div class="space">
+    <!-- <button class="btn btn-success" (click)="filterBy='kw'" routerLink="cake/karwachaut">Karwachaut Cake</button> -->
+    <button class="btn btn-success" (click)="filterBy='kw'"
+    >Karwachaut Cake</button>
   </div>
-  <div class="col-sm-2">
-    <button class="btn btn-success" (click)="filterBy='wed'" routerLink="/cake/wedding">Wedding Cake</button>
+  <div class="space">
+    <button class="btn btn-success" (click)="filterBy='wed'">Wedding Cake</button>
   </div>
-  <div class="col-sm-2">
-    <button class="btn btn-success" (click)="filterBy='ice'" routerLink="/cake/ice">Ice Cake</button>
+  <div class="space">
+    <button class="btn btn-success" (click)="filterBy='ice'">Ice Cake</button>
   </div>
-  <div class="col-sm-2">
-    <button class="btn btn-success" (click)="filterBy='bshower'" routerLink="/cake/baby">Baby Shower</button>
+  <div class="space">
+    <button class="btn btn-success" (click)="filterBy='bshower'" >Baby Shower</button>
+  </div>
+  <div class="space">
+    <button class="btn btn-success" (click)="filterBy='custom'">Custom</button>
   </div>
  </div>
 <div class="row">
   <ul class="imgshow">
-    <li class="imgli" *ngFor="let img of (allImages | filterImages: filterBy) ">
-      <a [routerLink]="['../../assets/image', img.id]">
-        <img src="{{img.path}}" class="img" width="270" height="270">
-      </a>
+    <li class="imgli" *ngFor="let img of (allImages | filterImage: filterBy) ">
+        <!-- <a [routerLink]= "[img.path]" > -->
+        <img src="{{img.path}}" class="img" width="270" height="270" id="selectimg"
+        (click)= "gotoweb(img.web, img.path)" >
+
+       <!-- </a> -->
     </li>
   </ul>
 </div>
 
+<!-- <script>
+  if (filterBy === 'kw'){
+    $('#selectimg').click(Function(){
+    window.location.href = '../kaewachaut';
+  })
+}else if (filterBy === 'boss') {
+  $('#selectimg').click(Function(){
+    window.location.href = '../boss';
+  })
 
-<router-outlet></router-outlet>
+} else if (filterBy === 'wed') {
+  $('#selectimg').click(Function(){
+    window.location.href = '../wedding';
+  })
+
+} else if (filterBy === 'ice') {
+  $('#selectimg').click(Function(){
+    window.location.href = '../ice';
+  })
+
+} else if (filterBy === 'custom') {
+  $('#selectimg').click(Function(){
+    window.location.href = '../custom';
+  })
+
+} else if (filterBy === 'bshower'){
+  $('#selectimg').click(Function(){
+    window.location.href = '../baby';
+  })
+}
+
+
+
+
+</script> -->
+
+
+<!-- <router-outlet></router-outlet> -->

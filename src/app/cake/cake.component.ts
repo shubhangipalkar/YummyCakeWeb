@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cake',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CakeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  gotopage(){
+return this.router.navigateByUrl('cake/karwachaut');
   }
 
 }
